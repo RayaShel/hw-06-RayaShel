@@ -1,8 +1,10 @@
 ---
 title: "HW 06 - Legos"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Raya Shelashska,"
+date: "July 19, 2022"
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Load packages and data
@@ -16,10 +18,12 @@ library(dsbox)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+Three most common names of purchasers are Jackson, Jacob, and Joseph
+```{r}
+lego_sales %>%
+  count(first_name, sort = TRUE) %>%
+  top_n(3)
+```
 
 ### Exercise 2
 

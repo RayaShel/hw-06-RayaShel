@@ -109,17 +109,30 @@ lego_sales %>%
 ### Exercise 8
 
 ```{r area-code}
-#I can't figure it out.
+#I don't know how to wrap my mind around it. I can't figure it out. Sorry. 
 ```
 
 
 ### Exercise 9
 
+Question: How big Lego sets do different age groups purchase? Customers 36-50 years old tend to buy bigger Lego sets than other age groups. The age 18 and under tend to buy smaller Lego sets than other age groups. 
 ```{r visualization}
 
-ggplot(data = lego_sales, aes(x = age_group, y =  us_price)) +
-  geom_boxplot()
+ggplot(data = lego_sales, aes(x = age_group, y =  pieces)) +
+  geom_boxplot() +
+  labs(
+    title = "Size of Lego sets purchased based on the age group",
+    x = "Age group", y = "Number of pieces in lego set") +
+  theme_minimal()
  
-
 ```
+
+
+```{r}
+ggplot(data = lego_sales, aes(x = age_group, color = pieces, fill = pieces)) +
+  geom_bar()
+#why there is no color? What did I miss?
+```
+
+
 

@@ -42,7 +42,7 @@ lego_sales %>%
   filter(theme == "Star Wars") %>%
   count(subtheme, sort = TRUE) %>%
   top_n(3)
-# is there is a way to make it one chunk? I tried to add more themes in the line but it didn't work
+# is there is a way to make it one chunk? I tried to add more themes in the filter line but it didn't work
 ```
 
 ```{r top-3-subthemes-2}
@@ -108,8 +108,18 @@ lego_sales %>%
 
 ### Exercise 8
 
-...
+```{r area-code}
+#I can't figure it out.
+```
+
 
 ### Exercise 9
 
-...
+```{r visualization}
+
+ggplot(data = lego_sales, aes(x = age_group, y =  us_price)) +
+  geom_boxplot()
+ 
+
+```
+
